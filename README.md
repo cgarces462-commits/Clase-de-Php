@@ -41,56 +41,7 @@ Este proyecto fue montado sobre **CachyOS (Arch Linux)** con herramientas instal
 > sudo sed -i 's/^;extension=pdo_mysql/extension=pdo_mysql/' /etc/php/php.ini
 > ```
 
-## Instalación y puesta en marcha
-
-```bash
-# 1. Ubicarse en la carpeta de proyectos de la clase
-cd /home/cesar/Trimestre-4/PHP/Proyectos_v1
-
-# 2. Crear el proyecto Laravel (nombre definido por la guía: gestor-adso)
-composer create-project laravel/laravel gestor-adso
-cd gestor-adso
-
-# 3. Configurar el entorno
-cp .env.example .env
-php artisan key:generate
-
-# 4. Crear la base de datos y el usuario (MariaDB)
-sudo mariadb
-#   CREATE DATABASE gestor_adso CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-#   CREATE USER 'gestor'@'localhost' IDENTIFIED BY 'gestor123';
-#   GRANT ALL PRIVILEGES ON gestor_adso.* TO 'gestor'@'localhost';
-#   FLUSH PRIVILEGES;
-
-# 5. Ejecutar migraciones
-php artisan config:clear
-php artisan migrate
-```
-
-### Configuración de `.env` (valores usados)
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=gestor_adso
-DB_USERNAME=gestor
-DB_PASSWORD=gestor123
-```
-
-> El archivo `.env` **no** se versiona (está en `.gitignore`) porque contiene información sensible.
-
-### Cómo ejecutar el servidor
-
-```bash
-php artisan serve
-# Servidor disponible en http://127.0.0.1:8000
-```
-
-La terminal queda ocupada mientras el servidor esté activo; para otros comandos Artisan/Git usar una segunda terminal en la raíz del proyecto.
-
 ## Módulo Aprendices (Semana 2)
-
 Flujo MVC implementado: **Navegador → routes/web.php → AprendizController → Vista Blade → Respuesta HTML**.
 
 | Ruta | Método | Acción | Vista |
