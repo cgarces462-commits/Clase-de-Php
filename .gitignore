@@ -26,9 +26,3 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 /database/*.sqlite
-/.agents
-/.claude
-/.mcp.json
-/boost.json
-/opencode.json
-/.ai
