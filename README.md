@@ -1,14 +1,3 @@
-# Gestor ADSO
-
-Proyecto integrador del programa **ADSO** (Análisis y Desarrollo de Software), SENA Regional Antioquia · CTMA.
-Gestor ADSO es una aplicación web construida con **PHP y Laravel** que crecerá de forma incremental durante el trimestre (metodología ABP). En la Semana 2 incorpora el módulo **Aprendices** (rutas, controlador REST y vistas Blade).
-
-- Resultado de aprendizaje: **EL02 / NORMA 220501094** — Elaborar propuesta técnica del software según especificaciones.
-
-## Entorno de desarrollo
-
-Este proyecto fue montado sobre **CachyOS (Arch Linux)** con herramientas instaladas de forma nativa (sin XAMPP, ya que XAMPP es exclusivo de Windows).
-
 | Herramienta | Versión real instalada | Comando de verificación |
 |---|---|---|
 | Sistema operativo | CachyOS (Arch Linux) | `cat /etc/os-release` |
@@ -60,16 +49,4 @@ php artisan route:clear   # si las rutas no se reflejan por caché
 
 El método `store()` valida `nombre`, `documento` y `correo` y, por ahora, simula el guardado (el almacenamiento real en BD con Eloquent se implementará en la Semana 4).
 
-## Evidencias del proceso
 
-Capturas incluidas en la entrega de Classroom:
-
-1. `php -v` y `which php` (PHP funcionando).
-2. `php -m` (extensiones requeridas activas).
-3. `composer -V`, `git --version`, `php artisan --version`.
-4. Pantalla de bienvenida/servidor en `http://127.0.0.1:8000`.
-5. `php artisan migrate` exitoso + tablas en `gestor_adso`.
-6. `php artisan route:list` con las rutas `aprendices.*`.
-7. Vistas `/aprendices` y `/aprendices/create` en el navegador.
-8. Mensaje "Aprendiz recibido (simulado)" tras enviar el formulario.
-9. Proyecto abierto en VS Code y commits de Git.
